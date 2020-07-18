@@ -19,7 +19,16 @@ class ViewController: UIViewController {
     
     func getEmployeeDetailsFromServer() {
         RestClient().callApi(api: "http://dummy.restapiexample.com/api/v1/employees", completion: { (result) in
-            
+            switch result {
+                
+            case.success(let responce) :
+                break
+                
+            case .failure(let error) :
+                break
+                
+                
+            }
             /// Do stuff after got responce...
             
         }, type: .GET, data: nil, isAbsoluteURL: true, headers: nil, isSilent: false, jsonSerialize: false)
